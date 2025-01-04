@@ -11,7 +11,7 @@ log() {
  echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
-# 无限循环，每 30 分钟重启一次服务
+# 无限循环，每 10 分钟重启一次服务
 while true; do 
  log "尝试重启 V2bX.service 服务..."
   if systemctl restart V2bX.service; then 
@@ -20,6 +20,6 @@ else
  log "重启 V2bX.service 服务失败，请检查服务状态！"
 fi
 
-  sleep 1800 # 每 30 分钟运行一次
+  sleep 600 # 每 10 分钟运行一次
 done
 
