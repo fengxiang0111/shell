@@ -20,6 +20,6 @@ else
  log "重启 V2bX.service 服务失败，请检查服务状态！"
 fi
 
-  sleep 600 # 每 10 分钟运行一次
+  sleep 300 # 每 6 分钟运行一次
 done
 
